@@ -4,6 +4,8 @@
   "description": "",
   "main": "server/dist/server.js",
   "scripts": {
+    "deploy": "npm start --prefix server",
+    "deploy:install": "npm install --prefix --omit=dev server && npm install --omit=dev",
     "install-all": "npm install --prefix client && npm install --prefix server",
     "start": "node server/dist/server.js"
   },
@@ -11,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "firebase-tools": "^12.5.2",
     "morgan": "^1.10.0",
     "react": "^18.2.0",
     "react-scripts": "^5.0.1"
